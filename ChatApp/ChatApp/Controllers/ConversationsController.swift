@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let reuseId = "ConversationCell"
+
 class ConversationsController: UIViewController {
     
     // MARK - Properties
@@ -35,7 +37,14 @@ class ConversationsController: UIViewController {
     }
     
     func configureTableView() {
-        tableView.backgroundColor = .systemPink
+        tableView.backgroundColor = .white
+        tableView.rowHeight = 80
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseId)
+        //Will only show as many separator lines as there are cells
+        tableView.tableFooterView = UIView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         view.addSubview(tableView)
         tableView.frame = view.frame
     }
@@ -60,5 +69,26 @@ class ConversationsController: UIViewController {
         navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
         
         
+    }
+}
+
+extension ConversationsController: UITableViewDelegate {
+    
+    
+}
+
+extension ConversationsController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath)
+        cell.textLabel?.text = "Test Cell"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
 }
