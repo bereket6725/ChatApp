@@ -14,12 +14,14 @@ class LoginController : UIViewController {
     
     private let emailContainerView: UIView = {
         let emailView = UIView()
+        emailView.setHeight(height: 50)
         emailView.backgroundColor = .cyan
         return emailView
     }()
     
     private let passwordContainerView: UIView = {
         let passwordView = UIView()
+        passwordView.setHeight(height:  50)
         passwordView.backgroundColor = .yellow
         return passwordView
     }()
@@ -37,7 +39,7 @@ class LoginController : UIViewController {
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.backgroundColor = .systemRed
-        
+        button.setHeight(height: 50)
         return button
     }()
     
@@ -60,6 +62,12 @@ class LoginController : UIViewController {
         iconImage.centerX(inView: view)
         iconImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         iconImage.setDimensions(height: 120, width: 120)
+        
+        let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, authButton])
+        stack.axis = .vertical
+        stack.spacing = 16
+        view.addSubview(stack)
+        stack.anchor(top: iconImage.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 32, paddingLeft: 32, paddingRight: 32)
     }
     
     func configureGradientLayer() {
