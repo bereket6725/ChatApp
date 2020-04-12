@@ -13,24 +13,46 @@ class LoginController : UIViewController {
     // MARK: - Properties
     
     private let emailContainerView: UIView = {
-        let emailView = UIView()
-        emailView.setHeight(height: 50)
-        emailView.backgroundColor = .cyan
-        return emailView
+        let containerView = UIView()
+        containerView.backgroundColor = .clear
+        //create and add image icone for email
+        let envelopeImageView = UIImageView()
+        envelopeImageView.image = UIImage(systemName: "envelope")
+        envelopeImageView.tintColor = .white
+        
+        containerView.addSubview(envelopeImageView)
+        envelopeImageView.centerY(inView: containerView)
+        envelopeImageView.anchor(left: containerView.leftAnchor, paddingLeft: 8)
+        envelopeImageView.setDimensions(height: 20.0, width: 24.0)
+
+        containerView.setHeight(height: 50)
+        return containerView
     }()
     
     private let passwordContainerView: UIView = {
-        let passwordView = UIView()
-        passwordView.setHeight(height:  50)
-        passwordView.backgroundColor = .yellow
-        return passwordView
+        let containerView = UIView()
+        containerView.backgroundColor = .clear
+        
+        //create and add image icon for password
+        let passwordImageView = UIImageView()
+        passwordImageView.image = UIImage(systemName: "lock")
+        passwordImageView.tintColor = .white
+    
+        containerView.addSubview(passwordImageView)
+        passwordImageView.centerY(inView: containerView)
+        passwordImageView.anchor(left: containerView.leftAnchor, paddingLeft: 8)
+        passwordImageView.setDimensions(height: 20, width: 24)
+
+        containerView.setHeight(height:  50)
+        
+        return containerView
     }()
     
     private let iconImage: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "bubble.right")
-        imageView.tintColor = .white 
-        return imageView
+        let containerView = UIImageView()
+        containerView.image = UIImage(systemName: "bubble.right")
+        containerView.tintColor = .white
+        return containerView
     }()
     
     private let authButton : UIButton = {
@@ -47,6 +69,7 @@ class LoginController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureUI()
     }
     
@@ -63,11 +86,14 @@ class LoginController : UIViewController {
         iconImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         iconImage.setDimensions(height: 120, width: 120)
         
-        let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, authButton])
+        let stack = UIStackView(arrangedSubviews: [emailContainerView,          passwordContainerView, authButton])
+        
         stack.axis = .vertical
         stack.spacing = 16
         view.addSubview(stack)
+        
         stack.anchor(top: iconImage.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 32, paddingLeft: 32, paddingRight: 32)
+        
     }
     
     func configureGradientLayer() {

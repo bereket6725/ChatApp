@@ -10,11 +10,11 @@
 		E3AE454F244283D30014F149 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE454E244283D30014F149 /* LoginController.swift */; };
 		E3AE4551244283E20014F149 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE4550244283E20014F149 /* RegistrationController.swift */; };
 		E3AE45532442882C0014F149 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE45522442882C0014F149 /* Extensions.swift */; };
+		E3AE455524439EBC0014F149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3AE455424439EBC0014F149 /* Assets.xcassets */; };
 		E3F7C8B424424EBD00E61129 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7C8B324424EBD00E61129 /* AppDelegate.swift */; };
 		E3F7C8B624424EBD00E61129 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7C8B524424EBD00E61129 /* SceneDelegate.swift */; };
 		E3F7C8B824424EBD00E61129 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7C8B724424EBD00E61129 /* ViewController.swift */; };
 		E3F7C8BB24424EBD00E61129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F7C8B924424EBD00E61129 /* Main.storyboard */; };
-		E3F7C8BD24424EBF00E61129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3F7C8BC24424EBF00E61129 /* Assets.xcassets */; };
 		E3F7C8C024424EBF00E61129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F7C8BE24424EBF00E61129 /* LaunchScreen.storyboard */; };
 		E3F7C8CB24424EBF00E61129 /* ChatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7C8CA24424EBF00E61129 /* ChatAppTests.swift */; };
 		E3F7C8DD24424F7D00E61129 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7C8DC24424F7D00E61129 /* ConversationsController.swift */; };
@@ -34,12 +34,12 @@
 		E3AE454E244283D30014F149 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		E3AE4550244283E20014F149 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		E3AE45522442882C0014F149 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E3AE455424439EBC0014F149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
 		E3F7C8B024424EBD00E61129 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F7C8B324424EBD00E61129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F7C8B524424EBD00E61129 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E3F7C8B724424EBD00E61129 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E3F7C8BA24424EBD00E61129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E3F7C8BC24424EBF00E61129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3F7C8BF24424EBF00E61129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3F7C8C124424EBF00E61129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3F7C8C624424EBF00E61129 /* ChatAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +106,7 @@
 				E3F7C8B524424EBD00E61129 /* SceneDelegate.swift */,
 				E3F7C8B724424EBD00E61129 /* ViewController.swift */,
 				E3F7C8B924424EBD00E61129 /* Main.storyboard */,
-				E3F7C8BC24424EBF00E61129 /* Assets.xcassets */,
+				E3AE455424439EBC0014F149 /* Assets.xcassets */,
 				E3F7C8BE24424EBF00E61129 /* LaunchScreen.storyboard */,
 				E3F7C8C124424EBF00E61129 /* Info.plist */,
 			);
@@ -249,7 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3F7C8C024424EBF00E61129 /* LaunchScreen.storyboard in Resources */,
-				E3F7C8BD24424EBF00E61129 /* Assets.xcassets in Resources */,
+				E3AE455524439EBC0014F149 /* Assets.xcassets in Resources */,
 				E3F7C8BB24424EBD00E61129 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
